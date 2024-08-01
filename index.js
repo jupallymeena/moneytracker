@@ -8,7 +8,7 @@ app.use(express.static('public'))
 app.use(bodyParser.urlencoded({
     extended:true
 }))
-mongoose.connect('mongodb://localhost:27017/MoneyList')
+mongoose.connect('mongodb://localhost:27017/moneytracker')
 var db=mongoose.connection
 db.on('error',()=> console.log("Error in connecting to the Database"))
 db.once('open',()=> console.log("Connected to Database"))
